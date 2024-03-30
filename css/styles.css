@@ -29,13 +29,18 @@ button {
     cursor: pointer;
 }
 .visually-hidden {
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
     position: absolute;
-    white-space: nowrap;
     width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
+
 
 .section {
     padding-top: 120px;
@@ -63,8 +68,6 @@ button {
 .header-nav {
     display: flex;
     align-items: center;
-    padding-top: 24px;
-    padding-bottom: 24px;
 }
 
 .logo-text {
@@ -76,6 +79,7 @@ button {
     text-transform: uppercase;
     color: #4d5ae5;
     margin-right: 76px;
+    
 }
 
 .logo-accent {
@@ -85,6 +89,11 @@ button {
 .nav-list {
     display: flex;
     gap: 40px;
+}
+
+.nav-list-item {
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .nav-list-link {
@@ -221,12 +230,13 @@ button {
     gap: 24px;
 }
 
-.team-member {
+.team-member { 
+    width: calc((100% - 72px) / 4);
     background-color: #FFFFFF;
+    border-radius: 0 0 4px 4px;
 }
 
 .team-member-info {
-    border-radius: 0 0 4px 4px;
     padding: 32px 0;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
